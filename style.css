@@ -1,48 +1,58 @@
-/* Títulos de cada ciclo */
-h2 {
-  margin-top: 40px;
-  color: #444;
-  font-size: 20px;
-  border-bottom: 2px solid #ccc;
-}
-
-/* Contenedor principal: malla vertical (ciclos uno debajo del otro) */
+/* Contenedor principal: columnas lado a lado con scroll horizontal */
 #malla {
   display: flex;
-  flex-direction: column;
-  gap: 30px;
+  flex-direction: row;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
 }
 
-/* Cada ciclo: materias en fila, lado a lado */
+/* Cada ciclo: columna vertical */
 .ciclo {
   display: flex;
-  flex-wrap: wrap;  /* si no entran, van a la siguiente línea */
+  flex-direction: column;
   gap: 10px;
+  min-width: 180px;
+  background: #ffe6f0;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 0 10px #f0a1c1;
 }
 
-/* Cada materia */
+/* Materias */
 .materia {
-  flex: 0 0 180px;  /* ancho fijo para mantener orden */
-  padding: 10px;
-  border-radius: 6px;
-  background-color: #ddd;
+  background-color: #f9bcd1;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-weight: 700;
+  color: #7a0146;
+  border: 2px solid transparent;
   cursor: pointer;
   text-align: center;
-  font-weight: bold;
-  border: 2px solid transparent;
   user-select: none;
+  transition: box-shadow 0.3s ease;
 }
 
-/* Estado habilitada */
 .materia.habilitada {
-  background-color: #c7e9c0;
-  border-color: #56a356;
+  border-color: #d5337f;
+  background-color: #f6c3d3;
+  box-shadow: 0 0 6px #d5337f;
 }
 
-/* Estado completada */
 .materia.completada {
-  background-color: #aaa;
+  background-color: #c490a0;
+  color: #4a2a3b;
   text-decoration: line-through;
-  color: #333;
   cursor: default;
+}
+
+/* Títulos de los ciclos */
+h2 {
+  font-weight: 700;
+  color: #b6005a;
+  margin-bottom: 15px;
+  text-align: center;
+  border-bottom: 2px solid #d5337f;
+  padding-bottom: 6px;
+  font-size: 18px;
 }
