@@ -1,1 +1,40 @@
+body {
+  font-family: sans-serif;
+  background-color: #f3f3f3;
+  margin: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+#malla {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.materia {
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #ddd;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.3s;
+  font-weight: bold;
+  border: 2px solid transparent;
+}
+
+.materia.habilitada {
+  background-color: #c1e1c1;
+  border-color: #5ca85c;
+}
+
+.materia.completada {
+  background-color: #999;
+  text-decoration: line-through;
+  color: #333;
+  cursor: default;
+}
 
