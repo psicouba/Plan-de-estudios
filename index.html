@@ -35,6 +35,57 @@
   </style>
 </head> 
   <style>
+  /* Malla: ciclos uno debajo del otro */
+  #malla {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 30px !important;
+  }
+
+  /* Cada ciclo: materias en fila, lado a lado */
+  .ciclo {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+  }
+
+  /* Materias con ancho fijo */
+  .materia {
+    flex: 0 0 180px !important;
+    padding: 10px !important;
+    border-radius: 6px !important;
+    background-color: #ddd !important;
+    cursor: pointer !important;
+    text-align: center !important;
+    font-weight: bold !important;
+    border: 2px solid transparent !important;
+    user-select: none !important;
+  }
+
+  /* Materias habilitadas */
+  .materia.habilitada {
+    background-color: #c7e9c0 !important;
+    border-color: #56a356 !important;
+  }
+
+  /* Materias completadas */
+  .materia.completada {
+    background-color: #aaa !important;
+    text-decoration: line-through !important;
+    color: #333 !important;
+    cursor: default !important;
+  }
+
+  /* Titulos */
+  h2 {
+    margin-top: 40px !important;
+    color: #444 !important;
+    font-size: 20px !important;
+    border-bottom: 2px solid #ccc !important;
+  }
+</style>
+
+  <style>
   .ciclo {
     display: flex !important;
     flex-direction: column !important;
